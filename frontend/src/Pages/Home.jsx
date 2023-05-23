@@ -40,7 +40,7 @@ const Home =()=>{
                         <img src={heroImg02} alt="" />
                     </div>
                 </Col>
-                {/*! resume from here */}
+{/* GG */}
             </Row>
         </Container>
     </section>
