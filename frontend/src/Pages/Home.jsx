@@ -31,12 +31,12 @@ const Home =()=>{
                     </div>
                 </Col>
                 <Col lg='2'>
-                    <div className="hero__img-box">
+                    <div className="hero__img-box mt-4">
                         <video src={heroVideo} alt="" controls />
                     </div>
                 </Col>
                 <Col lg='2'>
-                    <div className="hero__img-box">
+                    <div className="hero__img-box mt-5">
                         <img src={heroImg02} alt="" />
                     </div>
                 </Col>
@@ -44,7 +44,7 @@ const Home =()=>{
             </Row>
         </Container>
     </section>
-    {/* hero section start */}
+    {/* hero section end */}
 
     </>;
 };
