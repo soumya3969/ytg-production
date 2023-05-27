@@ -17,6 +17,7 @@ const SearchBar = () => {
 
         if(location==='' || distance==='' || maxGroupSize===''){
             return alert('ALL Field are required!')
+            // !to be continued.....from(38:39)
         }
     }
 
