@@ -1,0 +1,43 @@
+.tour__img img{
+    width: 100%;
+    border-radius: 5px;
+}
+.card{
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px ;
+}
+.tour__img{
+    position: relative;
+}
+.tour__img span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+}
+.card__top span i{
+    color: var(--secondary-color);
+}
+.card__rating{
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+.tour__location{
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.card__rating i,
+.tour__location i{
+    font-size: 1rem;
+}
+.tour__title{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
