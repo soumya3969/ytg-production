@@ -41,3 +41,10 @@
     margin-top: 1rem;
     font-size: 1.1rem;
 }
+.tour__title a{
+    text-decoration: none;
+    color: var(--heading-color);
+}
+.tour__title a:hover{
+    color: var(--secondary-color);
+}
