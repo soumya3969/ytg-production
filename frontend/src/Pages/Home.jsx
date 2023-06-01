@@ -82,6 +82,7 @@ const Home =()=>{
     
     
     {/*====== Featured tour section End=======   */}
+    {/*====== Experience section start =======   */}
     
     </>;
 };
