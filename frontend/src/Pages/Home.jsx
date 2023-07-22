@@ -4,7 +4,9 @@ import { Container, Row, Col } from 'reactstrap';
 import heroImg from '../assets/images/hero-img01.jpg';
 import heroImg02 from '../assets/images/hero-img02.jpg';
 import heroVideo from '../assets/images/hero-video.mp4';
-import worldImg from '../assets/images/world.png'
+import worldImg from '../assets/images/world.png';
+import experienceImg from '../assets/images/experience.png';
+
 import Subtitle from "../shared/Subtitle";
 
 import SearchBar from "../shared/SearchBar";
@@ -114,11 +116,28 @@ const Home = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col lg='6'></Col>
+                    <Col lg='6'>
+                        <div className="experience__img">
+                            <img src={experienceImg} alt="Experience" />
+                        </div>
+                    </Col>
                 </Row>
             </Container>
         </section>
         {/*====== Experience section end =======   */}
+        {/*====== Gallary section Start =======   */}
+
+        <section>
+            <Container>
+                <Row>
+                    <Col lg="12">
+                        <Subtitle subtitle={'Gallery'}/>
+                        <h2 className="gallery__title">Visit Our Customers Tour Gallery ...</h2>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+        {/*====== Gallary section end =======   */}
 
     </>;
 };
