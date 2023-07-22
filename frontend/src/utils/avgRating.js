@@ -1,6 +1,4 @@
-
-
-const calculateAvgRating = reviews => {
+const calculateAvgRating = (reviews) => {
   const totalRating = reviews?.reduce((acc, item) => acc + item.rating, 0);
   const avgRating =
     totalRating === 0
@@ -9,9 +7,9 @@ const calculateAvgRating = reviews => {
       ? totalRating
       : (totalRating / reviews?.length).toFixed(1);
 
-    return{
-        totalRating,
-        avgRating
-    }
+  return {
+    totalRating,
+    avgRating,
+  };
 };
 export default calculateAvgRating;
