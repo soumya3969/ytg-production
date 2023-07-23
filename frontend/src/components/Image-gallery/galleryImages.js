@@ -1,19 +1,21 @@
-import gallaryImg01 from "../../assets/images/gallary-01.jpg";
-import gallaryImg02 from "../../assets/images/gallary-02.jpg";
-import gallaryImg03 from "../../assets/images/gallary-03.jpg";
-import gallaryImg04 from "../../assets/images/gallary-04.jpg";
-import gallaryImg05 from "../../assets/images/gallary-05.jpg";
-import gallaryImg06 from "../../assets/images/gallary-06.jpg";
-import gallaryImg07 from "../../assets/images/gallary-07.jpg";
+import galleryImg01 from "../../assets/images/gallery-01.jpg";
+import galleryImg02 from "../../assets/images/gallery-02.jpg";
+import galleryImg03 from "../../assets/images/gallery-03.jpg";
+import galleryImg04 from "../../assets/images/gallery-04.jpg";
+import galleryImg05 from "../../assets/images/gallery-05.jpg";
+import galleryImg06 from "../../assets/images/gallery-06.jpg";
+import galleryImg07 from "../../assets/images/gallery-07.jpg";
 
-const gallaryImages = [
-  gallaryImg01,
-  gallaryImg02,
-  gallaryImg03,
-  gallaryImg04,
-  gallaryImg05,
-  gallaryImg06,
-  gallaryImg07,
+const galleryImages = [
+  galleryImg01,
+  galleryImg02,
+  galleryImg03,
+  galleryImg04,
+  galleryImg05,
+  galleryImg06,
+  galleryImg07,
+  galleryImg07,
+  galleryImg01,
 ];
 
-export default gallaryImages;
+export default galleryImages;

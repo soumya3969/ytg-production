@@ -1,13 +1,13 @@
 import React from 'react'
 
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-import gallaryImages from './galleryImages'
+import galleryImages from './galleryImages'
 
 function MasonryimgGallery() {
     return (
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 3, 992: 4 }}>
             <Masonry gutter='1rem'>
-                {gallaryImages.map((item, index) => (
+                {galleryImages.map((item, index) => (
                     <img src={item} key={index} alt="" style={{ 'width': '100%', 'display': 'block', 'borderRadius': '10px' }} />
                 ))}
             </Masonry>

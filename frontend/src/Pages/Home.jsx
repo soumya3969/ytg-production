@@ -12,6 +12,7 @@ import Subtitle from "../shared/Subtitle";
 import SearchBar from "../shared/SearchBar";
 import ServiceList from "../services/ServiceList";
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
+import MasonryimgGallery from "../components/Image-gallery/MasonryimgGallery";
 
 
 
@@ -135,7 +136,7 @@ const Home = () => {
                         <h2 className="gallery__title">Visit Our Customers Tour Gallery ...</h2>
                     </Col>
                     <Col lg='12'>
-                    
+                    <MasonryimgGallery/>
                     </Col>
                 </Row>
             </Container>
