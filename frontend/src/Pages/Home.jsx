@@ -134,6 +134,9 @@ const Home = () => {
                         <Subtitle subtitle={'Gallery'}/>
                         <h2 className="gallery__title">Visit Our Customers Tour Gallery ...</h2>
                     </Col>
+                    <Col lg='12'>
+                    
+                    </Col>
                 </Row>
             </Container>
         </section>
