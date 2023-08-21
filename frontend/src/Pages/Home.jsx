@@ -143,6 +143,14 @@ const Home = () => {
         </section>
         {/*====== Gallary section end =======   */}
 
+
+
+        {/*====== Testimonial section Start =======   */}
+
+        section
+
+        {/*====== Testimonial section Start =======   */}
+
     </>;
 };
 export default Home;

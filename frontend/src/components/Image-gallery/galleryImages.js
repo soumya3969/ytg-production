@@ -14,7 +14,6 @@ const galleryImages = [
   galleryImg05,
   galleryImg06,
   galleryImg07,
-  galleryImg07,
   galleryImg01,
 ];
 
