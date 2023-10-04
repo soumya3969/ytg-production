@@ -5,6 +5,13 @@
 .card{
     border: none !important;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px ;
+    scale: 1;
+    transition: all 1s;
+}
+.card:hover{
+    scale: 1.1;
+    transition: all 1s;
+    
 }
 .tour__img{
     position: relative;
@@ -62,6 +69,8 @@
     background: var(--secondary-color) !important;
     cursor: pointer;
     padding: 0.2rem 0.5rem !important;
+    scale: 1;
+    transition: all 0.5s;
 }
 .booking__btn a{
     text-decoration: none;
@@ -70,4 +79,6 @@
 }
 .booking__btn a:hover{
     color: #ffffff;
+    scale: 1.1;
+    transition: all 0.5s;
 }
