@@ -12,7 +12,7 @@ const tours = [
     title: "Westminister Bridge",
     city: "London",
     distance: 300,
-    price: 99,
+    price: 9900,
     maxGroupSize: 10,
     desc: "this is the description",
     reviews: [
@@ -34,7 +34,7 @@ const tours = [
     title: "Bali, Indonesia",
     city: "Indonesia",
     distance: 400,
-    price: 99,
+    price: 7900,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -52,7 +52,7 @@ const tours = [
     title: "Snowy Mountains, Thailand",
     city: "Thailand",
     distance: 500,
-    price: 99,
+    price: 10099,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -70,7 +70,7 @@ const tours = [
     title: "Beautiful Sunrise, Thailand",
     city: "Thailand",
     distance: 500,
-    price: 99,
+    price: 8999,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -88,7 +88,7 @@ const tours = [
     title: "Nusa Pendia Bali, Indonesia",
     city: "Indonesia",
     distance: 500,
-    price: 99,
+    price: 6499,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -106,7 +106,7 @@ const tours = [
     title: "Cherry Blossoms Spring",
     city: "Japan",
     distance: 500,
-    price: 99,
+    price: 7899,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -124,7 +124,7 @@ const tours = [
     title: "Holmen Lofoten",
     city: "France",
     distance: 500,
-    price: 99,
+    price: 8899,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -142,7 +142,7 @@ const tours = [
     title: "Snowy Mountains, Thailand",
     city: "Thailand",
     distance: 500,
-    price: 99,
+    price: 6499,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
