@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CommonSection from "../shared/CommonSection";
 import { Container, Row, Col } from "reactstrap";
 
@@ -9,6 +9,12 @@ import SearchBar from "../shared/SearchBar";
 import newsletter from "../shared/newsletter";
 
 const Tours = () => {
+  const [pageCount, setPageCount] = useState(0);
+  const [page, setPage] = useState(0);
+  useEffect(() => {
+    const pages = Math.ceil(5 / 8); //!later use backend data count
+    setPageCount(pages);
+  }, [page]);
   return (
     <>
       <CommonSection title={"All Tours"} />
@@ -28,8 +34,7 @@ const Tours = () => {
               </Col>
             ))}
 
-
-            <Col lg='12 '></Col>
+            <Col lg="12 "></Col>
           </Row>
         </Container>
       </section>
