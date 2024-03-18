@@ -27,8 +27,7 @@ const Booking = ({ tour, avgRating }) => {
   };
 
   // * Taking 5 % service charge of each place
-  const serviceCrg =
-    Number(Number(price) * 0.05) * Number(credentials.guestSize);
+  const serviceCrg =Math.trunc(Number(Number(price) * 0.05) * Number(credentials.guestSize));
   const totalAmt =
     Number(price) * Number(credentials.guestSize) + Number(serviceCrg);
   return (
