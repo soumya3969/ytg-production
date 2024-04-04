@@ -7,6 +7,18 @@ const Booking = ({ tour, avgRating }) => {
   const { price, reviews } = tour;
   const navigate = useNavigate();
 
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  let mm = today.getMonth() + 1; // Months start at 0!
+  let dd = today.getDate();
+
+  if (dd < 10) dd = "0" + dd;
+  if (mm < 10) mm = "0" + mm;
+
+  const formattedToday = (yyyy + "-" + mm + "-" + dd);
+  // const formattedToday = dd + "/" + mm + "/" + yyyy;
+  console.log(formattedToday)
+
   const [credentials, setCredentials] = useState({
     userId: "01", //* static for now later convert to dynamic
     userEmail: "user1@email.com",
@@ -23,11 +35,13 @@ const Booking = ({ tour, avgRating }) => {
   const handleClick = (e) => {
     e.preventDefault();
     // console.log(credentials);
-    navigate('/thank-you')
+    navigate("/thank-you");
   };
 
   // * Taking 5 % service charge of each place
-  const serviceCrg =Math.trunc(Number(Number(price) * 0.05) * Number(credentials.guestSize));
+  const serviceCrg = Math.trunc(
+    Number(Number(price) * 0.05) * Number(credentials.guestSize)
+  );
   const totalAmt =
     Number(price) * Number(credentials.guestSize) + Number(serviceCrg);
   return (
@@ -69,6 +83,8 @@ const Booking = ({ tour, avgRating }) => {
               placeholder=""
               id="bookAt"
               required
+              min={formattedToday}
+              defaultValue={formattedToday}
               onChange={handleChange}
             />
             <input
@@ -76,6 +92,7 @@ const Booking = ({ tour, avgRating }) => {
               placeholder="No Of Guests"
               id="guestSize"
               required
+              defaultValue={1}
               onChange={handleChange}
             />
           </FormGroup>
