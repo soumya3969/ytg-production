@@ -17,7 +17,7 @@ const Booking = ({ tour, avgRating }) => {
 
   const formattedToday = (yyyy + "-" + mm + "-" + dd);
   // const formattedToday = dd + "/" + mm + "/" + yyyy;
-  console.log(formattedToday)
+  // console.log(formattedToday)
 
   const [credentials, setCredentials] = useState({
     userId: "01", //* static for now later convert to dynamic
