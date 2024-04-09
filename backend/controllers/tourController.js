@@ -80,7 +80,7 @@ export const getSingleTour = async (req, res) => {
 // *getAll tours
 export const getAllTour = async (req, res) => {
   // * For Pagination
-  const page = parseInt(req.query.page);
+  const page = Number(req.query.page);
 
   // console.log(page);
 
@@ -91,7 +91,7 @@ export const getAllTour = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      count:tours.length,
+      count: tours.length,
       message: "Successfully Fetched",
       data: tours
     });
@@ -102,3 +102,62 @@ export const getAllTour = async (req, res) => {
     });
   }
 };
+
+// *Get tour by Search
+export const getTourBySearch = async (req, res) => {
+  //?Here 'i' means case sensitive
+  const city = new RegExp(req.query.city, "i");
+  const distance = Number(req.query.distance);
+  const maxGroupSize = Number(req.query.maxGroupSize);
+
+  try {
+    // *gte means greater than equal
+    const tours = await Tour.find({
+      city,
+      distance: { $gte: distance },
+      maxGroupSize: { $gte: maxGroupSize }
+    });
+    res.status(200).json({
+      success: true,
+      message: "Successfully Fetched",
+      data: tours
+    });
+  } catch (err) {
+    res.status(404).json({
+      success: false,
+      message: "Not Found"
+    });
+  }
+};
+
+
+// *get Featured tours
+export const getFeaturedTours = async (req, res) => {
+
+  try {
+    const tours = await Tour.find({featured:true}).limit(8);
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully Fetched",
+      data: tours
+    });
+  } catch (err) {
+    res.status(404).json({
+      success: false,
+      message: "Not Found"
+    });
+  }
+};
+
+
+// * get tour Counts
+export const getTourCount = async(req,res)=>{
+  try {
+    const tourCount = await Tour.estimatedDocumentCount()
+
+    res.status(200).json({success:true,data:tourCount})
+  } catch (err) {
+    res.status(500).json({success:false,message:'failed to fetch'})
+  }
+}
