@@ -9,10 +9,10 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 
-// // * For testing server
-// app.get('/',(req,res)=>{
-//     res.send('api is working')
-// })
+// * For testing server
+app.get('/',(req,res)=>{
+    res.send('api is working')
+})
 
 // * DataBase Connect:
 mongoose.set('strictQuery',false)
