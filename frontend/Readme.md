@@ -117,7 +117,7 @@ HARD DISK: 3 GB of available hard-disk space for installation, additional free s
 The Project encompasses several key objectives that drive its overall mission of revolutionizing the retail industry. These objectives include:
 
 1. To develop a web based application which includes
-2. To provide best travelling services to the customers and travel agents.
+2. To provide best traveling services to the customers and travel agents.
 3. To provide a search platform where a tourist can find their tour places according to their choices.
 4. To promote responsible and interesting tourism so that people can enjoy their holidays at their favorable places.
 5. To develop tourism with different cultures so that they enrich the tourism experience and build pride.
