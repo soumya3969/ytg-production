@@ -3,7 +3,8 @@
 ![](RackMultipart20230530-1-7j6n9_html_8d3ef7a8f8663be0.jpg)
 
 ####
-### **A MINOR PROJECT REPORT ON**
+
+### **A FINAL YEAR PROJECT REPORT ON**
 
 #### (Tour and Tourism Guide)
 
@@ -11,11 +12,9 @@
 
 **SOUMYA RANJAN MAHANTA (2205298175)**
 
-**TEJASKAR MAHANTA (2205298211)**
-
 **UNDER THE GUIDANCE OF**
 
-**Mrs.SMRUTI SMARAKI SARANGI**
+**Mr. P R MOHAPATRA**
 
 **Professor**
 
@@ -31,9 +30,9 @@
 
 ## CERTIFICATE
 
-This is Certify that Mr. **SOUMYA RANJAN MAHANTA (2205298175)** &Mr. **TEJASKAR MAHANTA (2205298211)** under to this project using HTML,CSS,JS in the 2ND semester. In this project we have completed all steps or phases of assigned projects for the partial fulfilment of requirement for the degree of master in computer application from Gandhi Institute for Technology.
+This is Certify that Mr. **SOUMYA RANJAN MAHANTA (2205298175)** under to this project using HTML,CSS,JS,REACT,NODE JS & MONGODB in the Final semester. In this project we have completed all steps or phases of assigned projects for the partial fulfillment of requirement for the degree of master in computer application from Gandhi Institute for Technology.
 
-**Mr. Pratyush Ranjan Mohapatra External Examiner Guide Sign**
+**Mr. S R PATTANAYAK**
 
 **Head of the Department**
 
@@ -41,23 +40,23 @@ This is Certify that Mr. **SOUMYA RANJAN MAHANTA (2205298175)** &Mr. **TEJASKAR 
 
 DECLARATION
 
-We Mr. Tejaskar Mahanta & Mr. Soumya Ranjan Mahanta, student of MCA ,GIFT BBSR hereby declare that the project report has been done by under the guidance of Mrs. **SMRUTI SMARAKI SARANGI** , Project Guide, GIFT, BHUBANESWAR for the partial requirement for the Degree in MCA.
+I am Mr. Soumya Ranjan Mahanta, student of MCA ,GIFT BBSR hereby declare that the project report has been done by under the guidance of Mrs. **P R MOHAPATRA** , Project Guide, GIFT, BHUBANESWAR for the partial requirement for the Degree in MCA.
 
 This project submitted by us is the effort of ours and has not been deposited to any other organization or published earlier.
 
-Place:-Bhubaneswar TEJASKAR MAHANTA (2205298211)
+Place:-Bhubaneswar
 
-Date:- SOUMYA RANJAN MAHANTA (2205298175)
+SOUMYA RANJAN MAHANTA (2205298175)
 
 #### ACKNOWLEDGEMENT
 
 ####
 
-![](RackMultipart20230530-1-7j6n9_html_f7761a019f66c583.png)We aregratefultoMrs. **SMRUTI SMARAKI SARANGI**
+![](RackMultipart20230530-1-7j6n9_html_f7761a019f66c583.png)We aregratefultoMrs. **P R MOHAPATRA**
 
 , ProjectGuide, GIFT, Bhubaneswarforassigning us this innovation project and modelling us both technically and morally for achieving greater success in life.
 
-It is great senses of satisfaction that our first real live venture in practical computing is in the form of project work. We extend our humble obligation towards Mr. Pratyush Ranjan Mohapatra, H.O.D, Dept ofMCA, center for post Graduate studies, GIFT for providing us with an environment to study and build our career.
+It is great senses of satisfaction that our first real live venture in practical computing is in the form of project work. We extend our humble obligation towards Mr. S R PATTANAYAK, H.O.D, Dept ofMCA, center for post Graduate studies, GIFT for providing us with an environment to study and build our career.
 
 Aboveallwethankthealmightywithoutwhose graceandblessingsIwould not have been able to complete my work successfully.
 
@@ -71,22 +70,14 @@ The Travel and Tourism Management System is a web based application and maintain
 
 ## CONTENTS
 
--
-#### Introduction
--
-#### Aim of the project
--
-#### Software requirement
--
-#### Objectives
--
-#### Features
--
-#### Advantages
--
-#### CONCLUSION
--
-#### Future scope
+> - #### Introduction
+> - #### Aim of the project
+> - #### Software requirement
+> - #### Objectives
+> - #### Features
+> - #### Advantages
+> - #### CONCLUSION
+> - #### Future scope
 
 ####
 
@@ -107,6 +98,7 @@ The main purpose of "Travel at Glance" is to provide an alternate and convenient
 - JavaScript
 - React
 - Node js with Npm Dependencies
+- MongoDB
 
 **Hardware Requirements**
 
@@ -142,11 +134,11 @@ The whole software design can be divided mainly into 3 parts - WebUI, a middlewa
 
 **Technology across different layers:**
 
-| **Technology Layer** | **Category** |
-| --- | --- |
+| **Technology Layer**        | **Category**                                                  |
+| --------------------------- | ------------------------------------------------------------- |
 | Presentation Layer / Web UI | HTML5,CSS 3, JavaScript, React, ReactStrap UI components etc. |
-| Middleware Layer | Node js and NPM Dependecies |
-| Persistence Provider | Hibernate with MongoDB database |
+| Middleware Layer            | Node js and NPM Dependecies                                   |
+| Persistence Provider        | Hibernate with MongoDB database                               |
 
 **Relational Database Schema: -**
 
