@@ -46,7 +46,7 @@ export const login = async (req, res) => {
     }
 
     // * If user is exist then check the password or compare the password.
-    const checkCorrectPassword = bcrypt.compare(
+    const checkCorrectPassword = await bcrypt.compare(
       req.body.password,
       user.password
     );
@@ -76,9 +76,9 @@ export const login = async (req, res) => {
       })
       .status(200)
       .json({
-        success: true,
-        message: "successfully login",
-        data: { ...rest }
+        token,
+        data: { ...rest },
+        role
       });
   } catch (err) {
     res.status(500).json({
