@@ -137,7 +137,7 @@ The whole software design can be divided mainly into 3 parts - WebUI, a middlewa
 | **Technology Layer**        | **Category**                                                  |
 | --------------------------- | ------------------------------------------------------------- |
 | Presentation Layer / Web UI | HTML5,CSS 3, JavaScript, React, ReactStrap UI components etc. |
-| Middleware Layer            | Node js and NPM Dependecies                                   |
+| Middleware Layer            | Node js,Express.js and NPM Dependencies                       |
 | Persistence Provider        | Hibernate with MongoDB database                               |
 
 **Relational Database Schema: -**
