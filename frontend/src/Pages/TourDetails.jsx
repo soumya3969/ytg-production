@@ -6,14 +6,17 @@ import tourData from "../assets/data/tours";
 import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assets/images/avatar.jpg";
 import Booking from "../components/Booking/Booking";
-import Newsletter from '../shared/newsletter';
+import Newsletter from "../shared/newsletter";
+import useFetch from "./../hooks/useFetch";
+import { BASE_URL } from "./../utils/config";
 
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef = useRef("");
   const [tourRating, setTourRating] = useState(null);
-  //* static for now later api will use and load our data from DB
-  const tour = tourData.find((tour) => tour.id === id);
+  //* Fetch data from the server
+  const { data: tour } = useFetch(`${BASE_URL}/tours/${id}`);
+  // const tour = tourData.find((tour) => tour.id === id);
   // *desturucture properties from tour object
   const {
     photo,
@@ -161,7 +164,7 @@ const TourDetails = () => {
           </Row>
         </Container>
       </section>
-      <Newsletter/>
+      <Newsletter />
     </>
   );
 };
