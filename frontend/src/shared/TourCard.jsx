@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 import calculateAvgRating from "../utils/avgRating";
@@ -9,7 +9,6 @@ const TourCard = ({ tour }) => {
   const { _id, title, city, photo, price, featured, reviews } = tour;
 
   const { totalRating, avgRating } = calculateAvgRating(reviews);
-
   return (
     <div className="tour__card">
       <Card>
