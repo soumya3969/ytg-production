@@ -5,16 +5,16 @@ import { Link, useNavigate } from "react-router-dom";
 import registerImg from "../assets/images/register.png";
 import userIcon from "../assets/images/user.png";
 
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "./../context/AuthContext";
 import { BASE_URL } from "../utils/config";
 
-// !===========================ERRRORRRR================
 const Register = () => {
   const [credentials, setCredentials] = useState({
     userName: undefined,
     email: undefined,
     password: undefined
   });
+  // console.log(credentials);
 
   const { dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ const Register = () => {
       const result = await res.json();
 
       if (!res.ok) alert(result.message);
-
+      // console.log(res, result.message);
       dispatch({ type: "REGISTER_SUCCESS" });
       navigate("/login");
     } catch (err) {
