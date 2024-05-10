@@ -48,8 +48,8 @@ const Home = () => {
               </div>
             </Col>
             <Col lg="2">
-              <div className="hero__img-box mt-4">
-                <video src={heroVideo} alt="" controls/>
+              <div className="hero__img-box hero__video-box mt-4">
+                <video src={heroVideo} alt="" controls />
               </div>
             </Col>
             <Col lg="2">
@@ -168,7 +168,7 @@ const Home = () => {
       </section>
       {/*====== Testimonial section end =======   */}
       {/*====== Newsletter section starts =======   */}
-      <Newsletter/>
+      <Newsletter />
       {/*====== Newsletter section End =======   */}
     </>
   );
