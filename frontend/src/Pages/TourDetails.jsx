@@ -1,8 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import "../styles/tour-details.css";
 import { Container, Row, Col, Form, ListGroup } from "reactstrap";
 import { useParams } from "react-router-dom";
-import tourData from "../assets/data/tours";
+// import tourData from "../assets/data/tours";
 import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assets/images/avatar.jpg";
 import Booking from "../components/Booking/Booking";
@@ -10,14 +10,18 @@ import Newsletter from "../shared/newsletter";
 import useFetch from "./../hooks/useFetch";
 import { BASE_URL } from "./../utils/config";
 
+import { AuthContext } from "./../context/AuthContext";
+
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef = useRef("");
   const [tourRating, setTourRating] = useState(null);
+  const { user } = useContext(AuthContext);
+
   //* Fetch data from the server
   const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
   // const tour = tourData.find((tour) => tour.id === id);
-  // *desturucture properties from tour object
+  // *destructure properties from tour object
   const {
     photo,
     title,
@@ -35,11 +39,38 @@ const TourDetails = () => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   // *submit request to the server
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
 
-    // ?later we use our api
+    try {
+      if (!user || user === undefined || user === null) {
+        alert("Please login to review this tour");
+      }
+
+      const reviewObj = {
+        username: user?.username,
+        reviewText,
+        rating: tourRating
+      };
+
+      const res = await fetch(`${BASE_URL}/review/${id}`, {
+        method: "post",
+        headers: {
+          "content-type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify(reviewObj)
+      });
+
+      const result = await res.json();
+      if (!res.ok) {
+        return alert(result.message);
+      }
+      alert(result.message);
+    } catch (err) {
+      alert(err.message);
+    }
   };
 
   useEffect(() => {
@@ -139,25 +170,24 @@ const TourDetails = () => {
                       </div>
                     </Form>
                     <ListGroup className="user__reviews">
-                      {reviews?.map((reviews) => (
+                      {reviews?.map((review) => (
                         <div className="review__item">
                           <img src={avatar} alt="" />
                           <div className="w-100">
                             <div className="d-flex align-items-center justify-content-between ">
                               <div className="">
-                                <h5>User</h5>
+                                <h5>{review.username}</h5>
                                 <p>
-                                  {new Date("01-23-2023").toLocaleDateString(
-                                    "en-US",
-                                    options
-                                  )}
+                                  {new Date(
+                                    review.createdAt
+                                  ).toLocaleDateString("en-US", options)}
                                 </p>
                               </div>
                               <span className="d-flex align-items-center">
-                                5 <i class="ri-star-s-fill"></i>
+                                {review.rating} <i class="ri-star-s-fill"></i>
                               </span>
                             </div>
-                            <h6>Amazing Tour</h6>
+                            <h6>{review.reviewText}</h6>
                           </div>
                         </div>
                       ))}

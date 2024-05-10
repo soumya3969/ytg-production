@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./booking.css";
 import { Form, FormGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { BASE_URL } from "../../utils/config";
 
 const Booking = ({ tour, avgRating }) => {
-  const { price, reviews } = tour;
+  const { price, reviews, title } = tour;
   const navigate = useNavigate();
+
+  const { user } = useContext(AuthContext);
 
   const today = new Date();
   const yyyy = today.getFullYear();
@@ -15,35 +19,59 @@ const Booking = ({ tour, avgRating }) => {
   if (dd < 10) dd = "0" + dd;
   if (mm < 10) mm = "0" + mm;
 
-  const formattedToday = (yyyy + "-" + mm + "-" + dd);
+  const formattedToday = yyyy + "-" + mm + "-" + dd;
   // const formattedToday = dd + "/" + mm + "/" + yyyy;
   // console.log(formattedToday)
 
-  const [credentials, setCredentials] = useState({
-    userId: "01", //* static for now later convert to dynamic
-    userEmail: "user1@email.com",
-    fullname: "",
+  const [booking, setBooking] = useState({
+    userId: user && user._id,
+    userEmail: user && user.email,
+    tourName: title,
+    fullName: "",
     phone: "",
     guestSize: 1,
     bookAt: ""
   });
   const handleChange = (e) => {
-    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+    setBooking((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   // *Send data to the server
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
-    // console.log(credentials);
-    navigate("/thank-you");
+    // console.log(booking);
+
+    try {
+      if (!user || user === undefined || user === null) {
+        return alert("Please sign in Book...");
+      }
+
+      const res = await fetch(`${BASE_URL}/booking`, {
+        method: "post",
+        headers: {
+          "content-type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify(booking)
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        return alert(result.message);
+      }
+      navigate("/thank-you");
+    } catch (err) {
+      alert(err.message);
+    }
   };
 
   // * Taking 5 % service charge of each place
   const serviceCrg = Math.trunc(
-    Number(Number(price) * 0.05) * Number(credentials.guestSize)
+    Number(Number(price) * 0.05) * Number(booking.guestSize)
   );
   const totalAmt =
-    Number(price) * Number(credentials.guestSize) + Number(serviceCrg);
+    Number(price) * Number(booking.guestSize) + Number(serviceCrg);
   return (
     <div className="booking">
       <div className="booking__top d-flex align-items-center justify-content-between">
@@ -63,7 +91,7 @@ const Booking = ({ tour, avgRating }) => {
             <input
               type="text"
               placeholder="Full Name"
-              id="fullname"
+              id="fullName"
               required
               onChange={handleChange}
             />
