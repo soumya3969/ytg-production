@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Col, Row } from "reactstrap";
-import Subtitle from "../shared/Subtitle";
 import Testimonials from "../components/Testimonial/Testimonials";
-import "./../styles/about.css"; // Make sure to create and style this CSS file as needed
+import "./../styles/about.css";
 
 const About = () => {
   return (

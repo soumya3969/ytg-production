@@ -14,6 +14,7 @@ const Register = () => {
     email: undefined,
     password: undefined
   });
+
   // console.log(credentials);
 
   const { dispatch } = useContext(AuthContext);
