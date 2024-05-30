@@ -25,7 +25,7 @@ router.delete("/tours/:id", verifyAdmin, deleteTour);
 router.get("/tours", verifyAdmin, getAllTour);
 
 // User routes
-router.get("/users", verifyAdmin, getAllUser);
+router.get("/users", getAllUser);
 router.put("/users/:id", verifyAdmin, updateUser);
 router.delete("/users/:id", verifyAdmin, deleteUser);
 
