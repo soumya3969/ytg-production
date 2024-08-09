@@ -1,4 +1,5 @@
 import express from "express";
+// ! This is admin page
 import {
   createTour,
   updateTour,
